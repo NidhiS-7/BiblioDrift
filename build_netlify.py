@@ -55,7 +55,7 @@ def build_html() -> None:
 
 def main() -> None:
     reset_dist()
-    for folder in ("css", "js", "assets", "script"):
+    for folder in ("css", "js", "assets", "script","vault"):
         copy_tree(folder)
     build_html()
 
