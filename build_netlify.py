@@ -38,6 +38,7 @@ def rewrite_html(content: str) -> str:
         'src="library-3d.js"': 'src="js/library-3d.js"',
         'src="script/header-scroll.js"': 'src="script/header-scroll.js"',
         'src="js/header-scroll.js"': 'src="script/header-scroll.js"',
+        'src="vault.js"':'src="js/vault.js"',
         '../assets/biblioDrift_favicon.png': 'assets/images/biblioDrift_favicon.png',
     }
 
@@ -55,7 +56,7 @@ def build_html() -> None:
 
 def main() -> None:
     reset_dist()
-    for folder in ("css", "js", "assets", "script","vault"):
+    for folder in ("css", "js", "assets", "script","vault","pages"):
         copy_tree(folder)
     build_html()
 
